@@ -2,7 +2,17 @@
 let score = 0;
 
 function showScore(){
-//スコア表示の処理をここに記述
+    //スコア表示の処理をここに記述
+    document.getElementById('score-message').innerHTML= score + '点: ' + `${Comment}`;
+    if (score === 3){
+        Comment = '素晴らしい!';
+    } else if (score === 2){
+        Comment = '惜しい!';
+    } else if (score === 1){
+        Comment = 'まぁまぁ';
+    } else {
+        Comment = '残念';
+    }
 }
 
 /**************
@@ -16,8 +26,6 @@ function answerQuiz1(){
     //問１の正解か不正解かを判断する機能＋もし正解だったらスコアを1点ずつプラスする機能
     const quiz_1 = document.getElementById('quiz-1');
     if (quiz_1.answer.value === 'a') {
-        //回答aだったら返す反応
-        score = score + 0;
         //選択したボタンの判定
         console.log('1問目の' + quiz_1.answer.value + 'を選択しました');
         //回答結果
@@ -25,7 +33,7 @@ function answerQuiz1(){
         //現在のスコアを表示
         console.log('現在のトータルスコア：' + score);
     } else if (quiz_1.answer.value === 'b') {
-        score = score + 1;
+        score++;
         //選択したボタンの判定
         console.log('1問目の' + quiz_1.answer.value + 'を選択しました');
         //回答結果
@@ -33,7 +41,6 @@ function answerQuiz1(){
         //現在のスコアを表示
         console.log('現在のトータルスコア：' + score);
     } else if (quiz_1.answer.value === 'c') {
-        score= score + 0;
         //選択したボタンの判定
         console.log('1問目の' + quiz_1.answer.value + 'を選択しました');
         //回答結果
@@ -48,8 +55,63 @@ function answerQuiz1(){
 
 function answerQuiz2(){
 //問題2の処理をここに記述
+    const quiz_2 = document.getElementById('quiz-2');
+    if (quiz_2.answer.value === 'a') {
+        //回答aだったら返す反応
+        score++;
+        //選択したボタンの判定
+        console.log('2問目の' + quiz_2.answer.value + 'を選択しました');
+        //回答結果
+        console.log('正解です');
+        //現在のスコアを表示
+        console.log('現在のトータルスコア：' + score);
+    } else if (quiz_2.answer.value === 'b') {
+        //選択したボタンの判定
+        console.log('2問目の' + quiz_2.answer.value + 'を選択しました');
+        //回答結果
+        console.log('不正解です');
+        //現在のスコアを表示
+        console.log('現在のトータルスコア：' + score);
+    } else if (quiz_2.answer.value === 'c') {
+        //選択したボタンの判定
+        console.log('2問目の' + quiz_2.answer.value + 'を選択しました');
+        //回答結果
+        console.log('不正解です');
+        //現在のスコアを表示
+        console.log('現在のトータルスコア：' + score);
+    } else {
+        //アラートで問2の回答をしてください
+        alert('問2の回答をしてください');
+    }
 }
 
 function answerQuiz3(){
 //問題3の処理をここに記述
+    const quiz_3 = document.getElementById('quiz-3');
+    if (quiz_3.answer.value === 'a') {
+        //選択したボタンの判定
+        console.log('3問目の' + quiz_3.answer.value + 'を選択しました');
+        //回答結果
+        console.log('不正解です');
+        //現在のスコアを表示
+        console.log('現在のトータルスコア：' + score);
+    } else if (quiz_3.answer.value === 'b') {
+        //選択したボタンの判定
+        console.log('3問目の' + quiz_3.answer.value + 'を選択しました');
+        //回答結果
+        console.log('不正解です');
+        //現在のスコアを表示
+        console.log('現在のトータルスコア：' + score);
+    } else if (quiz_3.answer.value === 'c') {
+        score++;
+        //選択したボタンの判定
+        console.log('3問目の' + quiz_3.answer.value + 'を選択しました');
+        //回答結果
+        console.log('正解です');
+        //現在のスコアを表示
+        console.log('現在のトータルスコア：' + score);
+    } else {
+        //アラートで問3の回答をしてください
+        alert('問3の回答をしてください');
+    }
 }
