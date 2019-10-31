@@ -4,17 +4,17 @@ let comment = '';
 
 function showScore(){
     //スコア表示の処理をここに記述
-    document.getElementById('score-message').innerHTML= comment;
+    const output = document.getElementById('score-message');
     if (score === 3){
-        comment = '3点;素晴らしい！';
+        output.innerHTML = '3点;素晴らしい！';
     } else if (score === 2){
-        comment = '2点;おしい！';
+        output.innerHTML= '2点;おしい！';
     } else if (score === 1){
-        comment = '1点;まぁまぁ';
+        output.innerHTML = '1点;まぁまぁ';
     } else {
-        comment = '0点;残念';
+        output.innerHTML = '0点;残念';
     }
-    console.log(comment);
+    console.log(output);
 }
 
 /**************
