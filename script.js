@@ -6,13 +6,13 @@ function showScore(){
     //スコア表示の処理をここに記述
     const output = document.getElementById('score-message');
     if (score === 3){
-        output.innerHTML = '3点;素晴らしい！';
+        output.innerHTML = score + '点:素晴らしい！';
     } else if (score === 2){
-        output.innerHTML= '2点;おしい！';
+        output.innerHTML = score + '点:おしい！';
     } else if (score === 1){
-        output.innerHTML = '1点;まぁまぁ';
+        output.innerHTML = score + '点:まぁまぁ';
     } else {
-        output.innerHTML = '0点;残念';
+        output.innerHTML = score + '点:残念';
     }
     console.log(output);
 }
